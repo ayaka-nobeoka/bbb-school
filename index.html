@@ -13,12 +13,13 @@
         </div>
             <div class="menu" id="menu"></div>
             <nav class="sp-menu" id="sp-menu">
+                <img src="./imgFile/img/logo-w.svg" width="100" height="33" class="header-img"/>
                 <ul class="sp-menu-list">
                     <li class="sp-menu-lists">BBBが選ばれる理由</li>
                     <li class="sp-menu-lists">受講生の声</li>
                     <li class="sp-menu-lists">スクールの概要</li>
                 </ul>
-                <button class="sp-menu-btn">無料体験に申し込む</button>
+                <button class="sp-menu-btn" id="sp-menu-btn">無料体験に申し込む</button>
             </nav>
         </div>
     </header>
@@ -26,10 +27,14 @@
         <article01>
             <div class="article01-warapper">
                 <div class="article-img-box">
-                <img src="./imgFile/img/mainvisual1.jpg" width="200" height="200">
+                <img src="./imgFile/img/mainvisual1.jpg" width="193" height="180" class="active">
+                <img src="./imgFile/img/mainvisual2.jpg" width="193" height="180">
+                <img src="./imgFile/img/mainvisual3.jpg" width="193" height="180">
                 </div>
-                <div class="article01-title">話して学ぼう！ BBB英会話スクール</div>
-                <button class="title-btn">無料体験はこちら</button>
+                    <div class="article01-text">
+                    <div class="article01-title">話して学ぼう！<br> BBB英会話スクール</div>
+                    <button class="title-btn" id="title-btn">無料体験はこちら</button>
+                    </div>
             </div>
         </article01>
 
@@ -37,20 +42,22 @@
             <div class="article-warapper">
                 <div class="article-title">BBBが選ばれる理由</div>
                 <div class="bg">
-                    <div class="slide">
-                        <div class="slide-img-box">
-                        <img class="slide-img">
-                        </div>
+                    <div class="slide01" id="slide01">
+                        <img src="./imgFile/img/icon-pc.png" class="slide-img" width="29" height="20">
+                        <div class="slide-box">
                         <p class="slide-text">オンライン対応</p>
-                        <p class="slide-text">24時間いつでも受講できる！</p>
+                        <p class="slide-texts">24時間いつでも受講できる！</p>
+                        </div>
                     </div>
 
-                    <div class="slide-img-box">
-                        <img class="slide-img">
+                    <div class="slide02" id="slide02">
+                        <img src="./imgFile/img/icon-teacher.png" class="slide-img" width="29" height="20">
+                        <div class="slide-box">
+                            <p class="slide-text">講師はネイティブ</p>
+                            <p class="slide-texts">お気に入りの講師が自由に選べる！</p>
+                        </div>
                     </div>
-                        <p class="slide-text">講師はネイティブ</p>
-                        <p class="slide-text">お気に入りの講師が自由に選べる！</p>
-                    </div>
+
                 </div>
             </div>
         </section01>
@@ -58,39 +65,46 @@
         <section02>
             <div class="article-warapper">
                 <div class="article-title">受講生の声</div>
-                <div class="comment">
-                    <div class="comment-student">
-                        <img src="./imgFile/img/icon-student1.png" width="120" height="120" class="student-img">
-                    </div>
-                    <div class="student-neme">○○○さん</div>
-                    <div class="student-job">大学生</div>
-                    <div class="comments">
-                        <div class="comment-text">テキストテキストテキストテキストテキストテキストテキス トテキストテキスト テキストテキストテキストテキストテキストテキストテキス トテキストテキスト</div>
-                    </div>
-
-                    <div class="comment-student">
-                        <img src="./imgFile/img/icon-student1.png" width="120" height="120" class="student-img">
-                    </div>
-                    <div class="student-neme">○○○さん</div>
-                    <div class="student-job">大学生</div>
-                    <div class="comments">
-                        <div class="comment-text">テキストテキストテキストテキストテキストテキストテキス トテキストテキスト テキストテキストテキストテキストテキストテキストテキス トテキストテキスト</div>
+                <div class="comment-warapper">
+                    <div class="comment">
+                        <div class="comment-student">
+                            <img src="./imgFile/img/icon-student1.png" width="120" height="120" class="student-img">
+                            <p class="student-neme">○○○さん</p>
+                            <p class="student-job">大学生</p>
+                        </div>
+                            <div class="comments">
+                                <div class="comment-text">テキストテキストテキストテキストテキストテキストテキス トテキストテキスト テキストテキストテキストテキストテキストテキストテキス トテキストテキスト</div>
+                            </div>
                     </div>
 
-                    <div class="comment-student">
-                        <img src="./imgFile/img/icon-student1.png" width="120" height="120" class="student-img">
-                    </div>
-                    <div class="student-neme">○○○さん</div>
-                    <div class="student-job">大学生</div>
-                    <div class="comments">
-                        <div class="comment-text">テキストテキストテキストテキストテキストテキストテキス トテキストテキスト テキストテキストテキストテキストテキストテキストテキス トテキストテキスト</div>
+                        <div class="comment-left">
+                            <div class="comment-student">
+                                <img src="./imgFile/img/icon-student1.png" width="120" height="120" class="student-img">
+                                <p class="student-neme">○○○さん</p>
+                                <p class="student-job">大学生</p>
+                            </div>
+                            <div class="comments-left">
+                                <div class="comment-text">テキストテキストテキストテキストテキストテキストテキス トテキストテキスト テキストテキストテキストテキストテキストテキストテキス トテキストテキスト</div>
+                            </div>
+                        </div>
+
+                            <div class="comment">
+                                <div class="comment-student">
+                                    <img src="./imgFile/img/icon-student1.png" width="120" height="120" class="student-img">
+                                    <p class="student-neme">○○○さん</p>
+                                    <p class="student-job">大学生</p>
+                                </div>
+                                <div class="comments">
+                                    <div class="comment-text">テキストテキストテキストテキストテキストテキストテキス トテキストテキスト テキストテキストテキストテキストテキストテキストテキス トテキストテキスト</div>
+                                </div>
+                            </div>
                     </div>
                 </div>
         </section02>
 
-        <section03>
-            <div class="article-warapper">
-                <div class="article-title">受講生の声</div>
+        <section03 class="section03">
+            <div class="lesson-warapper" id="background">
+                <div class="article-title">スクールの概要</div>
                 <ul class="lesson">
                     <li class="titles">
                         <p class="lesson-title">レッスン内容</p>
@@ -116,42 +130,58 @@
                         <p class="lesson-text">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                     </li>
                 </ul>
-        </section04>
+            </div>
+        </section03>
 
         <section05>
             <div class="coupon">
                 <h3 class="coupon-title">まずは無料で、BBBの英会話を試してみませんか？</h3>
                 <p class="coupon-text">今なら初月のレッスンを特別価格で受講できる割引クーポンをプレゼント！</p>
-                <button class="coupon-btn">無料体験に申し込む</button>
+                <a class="coupon-btn" id="coupon-btn" href="#">無料体験に申し込む</a>
             </div>
         </section05>
     </main>
-    <footer>
+    <footer class="footer">
         <ul class="footer-menu">
-            <li class="footer-title">コース一覧</li>
-            <li class="footer-text">スタンダードプラン</li>
-            <li class="footer-text">スタンダードプラン</li>
-            <li class="footer-text">スタンダードプラン</li>
-            <li class="footer-text">スタンダードプラン</li>
-            <li class="footer-text">スタンダードプラン</li>
-        </ul>
-        <ul>
-            <li class="footer-title">講師紹介</li>
-            <li class="footer-text">講師一覧</li>
-            <li class="footer-text">講師を探す</li>
-        </ul>
-        <ul>
-            <li class="footer-title">会社情報</li>
-            <li class="footer-text">スタンダードプラン</li>
-            <li class="footer-text">スタンダードプラン</li>
-        </ul>
-        <ul>
-            <li class="footer-title">BBBについて</li>
-            <li class="footer-text">スタンダードプラン</li>
-            <li class="footer-text">スタンダードプラン</li>
+            <li class="footer-menu-list">
+                <p class="footer-menu-title">コース一覧</p>
+                <ul class="lists">
+                    <li class="footer-text">スタンダードプラン</li>
+                    <li class="footer-text">スタンダードプラン</li>
+                    <li class="footer-text">スタンダードプラン</li>
+                    <li class="footer-text">スタンダードプラン</li>
+                    <li class="footer-text">スタンダードプラン</li>
+                </ul>
+
+                <li class="footer-menu-list">
+                    <p class="footer-menu-title">講師紹介</p>
+                    <ul class="lists">
+                        <li class="footer-text">講師について</li>
+                        <li class="footer-text">講師一覧</li>
+                        <li class="footer-text">講師を探す</li>
+                    </ul>
+                </li>
+
+                <li class="footer-menu-list">
+                    <p class="footer-menu-title">会社情報</p>
+                    <ul class="lists">
+                        <li class="footer-text">会社概要</li>
+                        <li class="footer-text">採用情報</li>
+                    </ul>
+                </li>
+
+                <li class="footer-menu-list">
+                    <p class="footer-menu-title">BBBについて</p>
+                    <ul class="lists">
+                        <li class="footer-text">よくあるご質問</li>
+                        <li class="footer-text">ご利用規約</li>
+                        <li class="footer-text">プライバシーポリシー</li>
+                        <li class="footer-text">お問い合わせ</li>
+                    </ul>
+                </li>
+            </li>
         </ul>
     </footer>
-<body>
-    <script src="scriput.js"></script>
-</body>
+    <script src="script.js"></script>
+</html>
 </html>
