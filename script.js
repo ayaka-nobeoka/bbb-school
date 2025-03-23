@@ -13,7 +13,7 @@ menu.addEventListener("click", () => {
     nav.classList.toggle("active");
 });
 
-const images = document.querySelectorAll('.article-img-box img');
+const images = document.querySelectorAll('.main-img');
 let nextIndex = 1;
 
 function imgAppear() {

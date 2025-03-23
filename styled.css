@@ -1,4 +1,6 @@
-body {
+
+
+html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -19,12 +21,13 @@ body {
 }
 .header-img {
     width: 100%;
+    padding: 20px;
 }
 /* ハンバーガーメニュー */
 .menu {
     position: fixed;
-    width: 50px;/* 赤い四角のサイズをやや大きく */
-    height: 50px;
+    width: 100px;/* 赤い四角のサイズをやや大きく */
+    height: 100px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -37,16 +40,16 @@ body {
 }
 /* 三本線 */
 .menu div {
-    width: 60%;/* 幅を縮めて中央に配置 */
-    height: 1px;/* 線を細く */
+    width: 50%;/* 幅を縮めて中央に配置 */
+    height: 2px;/* 線を細く */
     background: white;/* 線は白色 */
-    margin: 4px 0;/* 線間の余白 */
+    margin: 6px 0;/* 線間の余白 */
     transition: 0.3s;
 }
 
 /* ハンバーガーが×に変化 */
 .menu.active div:nth-child(1) {
-    transform: translateY(10px) rotate(45deg);
+    transform: translateY(12px) rotate(45deg);
 }
 
 .menu.active div:nth-child(2) {
@@ -54,7 +57,7 @@ body {
 }
 
 .menu.active div:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-15px) rotate(-45deg);
 }
 
 /* メニュー */
@@ -105,24 +108,36 @@ body {
     cursor: pointer;
     transition: 0.3s;
 }
-
-.article-img-box {
+.article01-warapper {
     position: relative;
+    height: 720px;
+}
+.article-img-box {
     width: 100%;
+    object-fit: cover;
+  }
+  .main-img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 75%;
     height: 720px;
     object-fit: cover;
-  }
-  .article-img-box img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    box-shadow: inset 0px 0px 20px 20px #fff;
     opacity: 0;
   }
-.article-img-box img.active {
+  .article-img-box::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 75%;
+    height: 720px;
+    box-shadow: inset 0px 0px 20px 20px #fff;;
+  }
+  .main-img, .active {
+    content: "";
+    position: absolute;
+    width: 75%;
     animation: 5s FadeIn;
   }
   /* 画像がフェードイン＆ズームインし、フェードアウトするアニメーション */
@@ -136,11 +151,6 @@ body {
     100% {
       opacity: 0;
     }
-  }
-.article01-warapper {
-    height: 720px;
-    position: relative;
-    margin-bottom: 120px;
   }
 .article01-text {
     position: absolute;
@@ -158,6 +168,7 @@ body {
     margin-left: 16px;
   }
 .title-btn {
+    width: 100%;
     top: 0px;
     left: 16px;
     background-color: #ff2a2a;
@@ -183,6 +194,10 @@ body {
     top: 26px;
     right: 30px;
   }
+  .article-warapper {
+    display: block;
+    margin:20px 0;
+  }
 .article-title {
     font-size: 1.75rem;
     font-weight: bold;
@@ -202,6 +217,10 @@ body {
     right: 0;
     margin: 0 auto;
 }
+/* BBBが選ばれる理由 */
+.article-warapper {
+    display: block;
+}
 .bg {
     background-color: #ff2a2a;
     padding: 40px 0;
@@ -211,7 +230,7 @@ body {
     width: 100%;
     gap: 40px;
 }
-.slide01, .slide02 {
+.slide01 {
     width: 50%;
     opacity: 0;
     transition: opacity 1s, transform 1s;
@@ -270,9 +289,6 @@ body {
 .slide-texts {
     font-size: 1.125rem;
 }
-.article-warapper {
-    margin-top: 50px;
-}
 
 /* 受験生の声*/
 
@@ -290,10 +306,6 @@ body {
     margin: 0 auto;
     opacity: 0;
     transition: opacity 1s, transform 1s;
-}
-.pop-in {
-    opacity: 1;
-    transform: translateX(0) scale(1); /* 拡大しながら元の位置に */
 }
 .student-img {
     width: 120px;
@@ -330,7 +342,11 @@ body {
     width: 100%;
     max-width: 860px;
     margin: 0 auto;
-    transition: opacity 1s, transform 1s;
+    transition: opacity 1s ease, transform 1s ease;
+}
+.pop-in {
+    opacity: 1;
+    transform: translateX(0) scale(1); /* 拡大しながら元の位置に */
 }
 .comments-left {
     width: 60%;
@@ -351,6 +367,12 @@ body {
     border: 15px solid transparent;
     border-left: 15px solid #e9f1fb;
 }
+.student-neme, .student-job {
+    margin: 0px;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
 
 /* スクールの概要*/
 .section03 {
@@ -365,26 +387,27 @@ body {
 .lesson {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
+    padding: 0px;
 }
 .titles {
     list-style: none;
-    width: calc(50% - 10px);        /* 幅を調整し2列に */
+    width: 30%;      /* 幅を調整し2列に */
     background-color: #fff;
     border-radius: 20px;
-    padding: 0px;
-    margin: 0;                       /* 不要なマージンを削除 */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* 軽い影を追加 */
-    transition: 0.3s;
+    padding: 60px;
 }
 .lesson-title {
     font-weight: bold;
     line-height: 1;
     text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 15px;
 }
 .lesson-sab-title {
     display: block;
+    text-align: center;
     font-size: 1.125rem;
     margin-bottom: 30px;
 }
@@ -419,3 +442,111 @@ body {
     list-style: none;
     justify-content: space-between;
 }
+.footer-menu-title {
+    font-weight: bold;
+}
+.lists {
+    list-style: none;
+    margin-left: -30px;
+    font-size: 0.875rem;
+}
+
+
+/* スマホサイズ (900px未満) */
+@media (max-width: 899px) {
+
+    .article-img-box {
+        width: 100%;
+        margin-bottom: 80px;
+    }
+
+    .main-img {
+      top: 0;    /* 中央配置 */
+      left: 0;
+      width: 100%;
+      height: auto;
+      opacity: 1;
+    }
+    .article-img-box::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: auto;
+        width: 100%;
+        box-shadow: inset 0px 0px 20px 20px #fff;
+        opacity: 1;
+    }
+
+    .article01-text {
+        width: calc(100% - 32px);
+        top: 310px;
+        left: 16px;
+      }
+      .slide01 {
+        width: 80%;
+    }
+    .slide02 {
+        width: 100%;
+        margin-left: 10px;
+        padding: 10px 0;
+    }
+
+        /* 受験生の声*/
+
+    .comment {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-bottom: 10%;
+        text-align: center;
+    }
+    .comments::before {
+        top: 100%;
+        left: 50%;
+        margin-left: -4%;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 15px solid #e9f1fb;
+    }
+    .comments {
+        margin-left: 0;
+    }
+    .comment-student {
+        margin-top: 30px;
+        text-algn: center;
+    }
+    .comments-left {
+        margin-right: 0;
+    }
+    .comment-left {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-bottom: 10%;
+        text-align: center;
+    }
+    .comments-left::before {
+        top: 100%;
+        right: 50%;
+        margin-right: -4%;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 15px solid #e9f1fb;
+    }
+
+/* スクールの概要*/
+
+    .titles {
+        width: 50%;
+    }
+
+    .coupon {
+        padding: 0 16px;
+    }
+}
+
+
+
+
+
